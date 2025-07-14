@@ -1,0 +1,72 @@
+/* PC端优化样式 */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: ltr;
+  text-orientation: mixed;
+  writing-mode: horizontal-tb;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 确保文字正常显示 */
+* {
+  box-sizing: border-box;
+}
+
+/* 防止文字垂直显示 */
+.ant-typography {
+  white-space: normal;
+  word-break: normal;
+  writing-mode: horizontal-tb;
+}
+
+/* 确保卡片内容正常布局 */
+.ant-card-body {
+  display: block;
+}
+
+/* 响应式布局优化 */
+@media (min-width: 768px) {
+  .ant-col {
+    float: left;
+  }
+}
+
+/* 表格响应式 */
+.ant-table-wrapper {
+  overflow-x: auto;
+}
+
+/* 统计卡片样式 */
+.stats-card {
+  text-align: center;
+  padding: 20px;
+}
+
+/* 确保Space组件正常显示 */
+.ant-space {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* 修复可能的布局问题 */
+.ant-layout-content {
+  min-height: calc(100vh - 64px);
+}
+
+/* 确保侧边栏正常 */
+.ant-layout-sider {
+  flex: 0 0 auto;
+}

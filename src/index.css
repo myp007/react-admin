@@ -1,0 +1,73 @@
+/* 重置样式 */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: ltr;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+}
+
+/* 确保所有文本都是水平显示 */
+*, *::before, *::after {
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+  direction: ltr !important;
+}
+
+/* Ant Design 组件样式重写 */
+.ant-typography,
+.ant-typography h1,
+.ant-typography h2,
+.ant-typography h3,
+.ant-typography h4,
+.ant-typography h5,
+.ant-typography h6,
+.ant-typography p,
+.ant-typography div,
+.ant-typography span {
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+  direction: ltr !important;
+  white-space: normal !important;
+  word-break: normal !important;
+}
+
+/* 确保卡片内容正常布局 */
+.ant-card-body {
+  display: block;
+  writing-mode: horizontal-tb !important;
+}
+
+/* 确保Space组件正常显示 */
+.ant-space {
+  display: inline-flex !important;
+  align-items: center;
+  writing-mode: horizontal-tb !important;
+}
+
+/* 修复布局问题 */
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-layout-content {
+  min-height: calc(100vh - 64px);
+}
+
+/* 确保所有文本元素都是水平的 */
+h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, label {
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+  direction: ltr !important;
+}
